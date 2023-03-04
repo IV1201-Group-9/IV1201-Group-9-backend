@@ -47,7 +47,7 @@ public class SecConfig {
                 .cors(Customizer.withDefaults()) // Uses the Bean CorsConfigurationSource
                 .authorizeHttpRequests()
                 .requestMatchers("/api/v1/auth/**").permitAll()
-//                .requestMatchers("/api/v1/testEndpoint/**").permitAll()
+                .requestMatchers("/api/v1/testEndpoint/**").permitAll()
                 .requestMatchers("/api/v1/recruiters/**").hasAuthority(" recruiter")
 //                .requestMatchers("/api/v1/recruiters/**").permitAll()
                 .requestMatchers("/api/v1/getAllApplicants/**").hasAuthority(" applicant")
