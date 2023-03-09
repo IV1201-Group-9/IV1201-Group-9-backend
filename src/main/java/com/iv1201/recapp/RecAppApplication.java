@@ -2,20 +2,19 @@ package com.iv1201.recapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
- *
+ * Spring boot application main.
  */
 @SpringBootApplication
 public class RecAppApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(RecAppApplication.class, args);
-		System.out.println("Hello Gustav");
+		System.out.println("Hello, Server started");
 	}
 
 	/**

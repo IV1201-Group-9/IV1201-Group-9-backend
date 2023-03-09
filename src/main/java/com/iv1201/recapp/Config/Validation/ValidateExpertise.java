@@ -6,14 +6,14 @@ import jakarta.validation.Payload;
 import java.lang.annotation.*;
 
 /**
- * Could be used for validation of new roles - Not implemented.
+ * Annotation for validation of expertise in <code>AreaOfExpertiseDTO</code>.
  */
 @Target({ElementType.FIELD, ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Constraint(validatedBy = RoleIdValidator.class)
-public @interface ValidateRoleId {
-    public String message() default "Role ID Value Invalid";
+@Constraint(validatedBy = ExpertiseValidator.class)
+public @interface ValidateExpertise {
+    public String message() default "Area of expertise does not exist";
 
     Class<?> [] groups() default {};
     Class<? extends Payload> [] payload() default {};

@@ -2,6 +2,9 @@ package com.iv1201.recapp.Models.AuthDTO;
 
 import com.iv1201.recapp.Models.Role;
 
+/**
+ * Data transfer object to handle outgoing HTTP response for authentication.
+ */
 public class AuthResponseDTO {
     private String jwtToken;
     private Role role;

@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Class for returning custom validation of status of <code>Application</code>
  */
-public class ApplicationDTOValidator implements ConstraintValidator<ValidateApplicationDTOStatus, String> {
+public class StatusDTOValidator implements ConstraintValidator<ValidateStatusDTO, String> {
 
     /**
      * Checks and returns validity of status in <code>ApplicationDTO</code>.

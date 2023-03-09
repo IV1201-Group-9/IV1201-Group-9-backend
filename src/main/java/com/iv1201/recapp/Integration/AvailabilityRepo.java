@@ -6,8 +6,11 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+/**
+ * Repository for availability
+ */
 @Repository
 @Transactional(propagation = Propagation.MANDATORY)
 public interface AvailabilityRepo extends JpaRepository<Availability, Long> {
- // from_date, to-date, fk_id_person
+ // only uses save
 }

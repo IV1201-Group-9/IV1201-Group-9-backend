@@ -26,13 +26,16 @@ public class JwtService {
     @Value("${jwt.secret}")
     private String secret;
 
+    /**
+     * Zero constructor.
+     */
     public JwtService(){
     }
 
     /**
-     *
-     * @param userDetails
-     * @return
+     * Create a token usign the <code>UserDetails</code>
+     * @param userDetails to be used in creation of token.
+     * @return a token that has been created.
      */
     public String createToken(UserDetails userDetails){
         return createToken(new HashMap<>(), userDetails);
@@ -62,6 +65,12 @@ public class JwtService {
         return Keys.hmacShaKeyFor(keyBase64);
     }
 
+    /**
+     * Check validity of token. If username equals the one in userDetails.
+     * @param jwtToken The token to be checked.
+     * @param userDetails UserDetails to check token against.
+     * @return true or false.
+     */
     public boolean checkTokenValidity(String jwtToken, UserDetails userDetails){
         final String username = getUsernameFromToken(jwtToken);
         return (username.equals(userDetails.getUsername())) && !checkExpirationOfToken(jwtToken);
@@ -79,6 +88,13 @@ public class JwtService {
         return getSingleClaim(jwtToken, Claims::getSubject);
     }
 
+    /**
+     * Get one claim at the time in the token.
+     * @param jwtToken to get claim from
+     * @param claimFetcher function to get claims
+     * @return all claims in token, one at the time.
+     * @param <T>
+     */
     public<T> T getSingleClaim(String jwtToken, Function<Claims, T> claimFetcher){
         final Claims allClaims = getAllClaims(jwtToken);
         return claimFetcher.apply(allClaims);

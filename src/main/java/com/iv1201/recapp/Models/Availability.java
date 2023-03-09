@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 
 import java.util.Date;
 
+/**
+ * POJO for Availability.
+ */
 @Entity
 @Table()
 public class Availability {
@@ -11,7 +14,8 @@ public class Availability {
     @SequenceGenerator(
             name = "availability_sequence",
             sequenceName = "availability_sequence",
-            allocationSize = 1
+            allocationSize = 1,
+            initialValue=21000
     )
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,
@@ -27,12 +31,14 @@ public class Availability {
     @JoinColumn(name = "fk_id_person")
     User user;
 
+//    @ValidateDate
     @Column(
             name = "from_date",
             columnDefinition = "DATE"
     )
     Date fromDate;
 
+//    @ValidateDate
     @Column(
             name = "to_date",
             columnDefinition = "DATE"

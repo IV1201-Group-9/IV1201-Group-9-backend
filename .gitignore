@@ -29,6 +29,7 @@ target/
 !**/src/test/**/target/
 
 ### Config Files ###
+application.properties
 
 ### STS ###
 .apt_generated

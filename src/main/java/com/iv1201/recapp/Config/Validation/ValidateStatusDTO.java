@@ -6,14 +6,14 @@ import jakarta.validation.Payload;
 import java.lang.annotation.*;
 
 /**
- * Could be used for validation of new roles - Not implemented.
+ * Annotation for validation ValidateStatusDTO
  */
 @Target({ElementType.FIELD, ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Constraint(validatedBy = RoleIdValidator.class)
-public @interface ValidateRoleId {
-    public String message() default "Role ID Value Invalid";
+@Constraint(validatedBy = StatusDTOValidator.class)
+public @interface ValidateStatusDTO {
+    public String message() default "Status Value Invalid; could not update";
 
     Class<?> [] groups() default {};
     Class<? extends Payload> [] payload() default {};

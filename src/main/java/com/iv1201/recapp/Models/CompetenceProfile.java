@@ -2,6 +2,11 @@ package com.iv1201.recapp.Models;
 
 import jakarta.persistence.*;
 
+import java.math.BigDecimal;
+
+/**
+ * POJO for Competence Profile.
+ */
 @Entity
 @Table()
 public class CompetenceProfile {
@@ -9,7 +14,8 @@ public class CompetenceProfile {
     @SequenceGenerator(
             name = "competence_profile_sequence",
             sequenceName = "competence_profile_sequence",
-            allocationSize = 1
+            allocationSize = 1,
+            initialValue=7000
     )
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,
@@ -31,17 +37,16 @@ public class CompetenceProfile {
 
     @Column(
             name = "years_of_experience",
-            columnDefinition = "INTEGER"
+            columnDefinition = "NUMERIC"
     )
-    private float yearsOfExperience;
-
+    private BigDecimal yearsOfExperience;
 
     public CompetenceProfile() {
     }
 
     public CompetenceProfile(User user,
                              Competence competence,
-                             float yearsOfExperience) {
+                             BigDecimal yearsOfExperience) {
         this.user = user;
         this.competence = competence;
         this.yearsOfExperience = yearsOfExperience;
@@ -63,11 +68,11 @@ public class CompetenceProfile {
         this.competence = competence;
     }
 
-    public float getYearsOfExperience() {
+    public BigDecimal getYearsOfExperience() {
         return yearsOfExperience;
     }
 
-    public void setYearsOfExperience(int yearsOfExperience) {
+    public void setYearsOfExperience(BigDecimal yearsOfExperience) {
         this.yearsOfExperience = yearsOfExperience;
     }
 

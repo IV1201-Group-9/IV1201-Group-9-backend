@@ -6,6 +6,9 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+/**
+ * Repository for Role.
+ */
 @Repository
 @Transactional(propagation = Propagation.MANDATORY)
 public interface RoleRepo extends JpaRepository<Role, Long> {

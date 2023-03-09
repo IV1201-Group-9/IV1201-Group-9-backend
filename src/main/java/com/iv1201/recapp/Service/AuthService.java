@@ -41,10 +41,6 @@ public class AuthService {
     private JwtService jwtService;
     @Autowired
     private UserService userService;
-    @Autowired
-    private ApplicationService applicationService;
-
-    String errorMsgForClient = "User could not be";
 
     /**
      * Authenticate user trying to sign in.

@@ -8,17 +8,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- *
+ * Test controller for testing access to controller.
  */
 @RestController
 @RequestMapping("/api/v1/testEndpoint")
 public class TestController {
 
-    @GetMapping
-    public ResponseEntity<String> test(){
-        return ResponseEntity.ok("Hello");
-    }
-
+    /**
+     * Test endpoint for testing.
+     * @return String with response to test.
+     */
     @GetMapping("/anotherTestEndpoint")
     public ResponseEntity<String> anotherTest(){
         System.out.println("test");

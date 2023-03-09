@@ -5,6 +5,9 @@ import jakarta.validation.Payload;
 
 import java.lang.annotation.*;
 
+/**
+ * Could be used for validation of new roles - Not implemented.
+ */
 @Target({ElementType.FIELD, ElementType.PARAMETER})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented

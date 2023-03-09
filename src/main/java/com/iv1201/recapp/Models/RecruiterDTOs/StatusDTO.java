@@ -1,8 +1,18 @@
 package com.iv1201.recapp.Models.RecruiterDTOs;
 
+import com.iv1201.recapp.Config.Validation.ValidateStatusDTO;
+import jakarta.validation.constraints.Min;
+
+
+/**
+ *  Incoming DTO for update of status
+ */
 public class StatusDTO {
 
+//    Because applicants start at id 11
+    @Min(11)
     Long id;
+    @ValidateStatusDTO
     String status;
 
     public StatusDTO() {

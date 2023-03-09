@@ -2,7 +2,6 @@ package com.iv1201.recapp.Models.AuthDTO;
 
 import jakarta.validation.constraints.*;
 
-//todo should we delete and only keep on of authRequestDTO and RegisterRequestDTO?
 /**
  * Data transfer object to handle incoming HTTP requests for authentication.
  */

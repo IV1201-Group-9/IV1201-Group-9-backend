@@ -9,6 +9,7 @@ import java.util.List;
 
 /**
  * Class for returning custom validation of id in <code>Role</code> class.
+ * - not implemented.
  */
 public class RoleIdValidator implements ConstraintValidator<ValidateRoleId, Long> {
     /**

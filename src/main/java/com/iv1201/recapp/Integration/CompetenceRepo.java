@@ -9,9 +9,12 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+/**
+ * Repository for Competence.
+ */
 @Repository
 @Transactional(propagation = Propagation.MANDATORY)
-public interface CompetenceRepo extends JpaRepository <Competence, Long> {
+public interface CompetenceRepo extends JpaRepository <Competence, String> {
 
     Competence findCompetenceById(Long id);
 

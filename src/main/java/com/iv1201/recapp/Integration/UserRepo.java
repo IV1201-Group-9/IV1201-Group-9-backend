@@ -10,19 +10,19 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Repository for User.
+ */
 @Repository
 @Transactional(propagation = Propagation.MANDATORY)
 public interface UserRepo extends JpaRepository<User, Long> {
-    Optional<User> findByUsername(String username);
+    User findByUsername(String username);
 
     User findByEmail(String email);
 
     User findUserByUsername(String principalName);
 
-    List<User> findAllByUserRole(Long userRole);
-
-    List<User> findAllByApplicationStatusNotNull();
-    List<User> findAllByApplicationStatusNotNullAndFirstnameNotNull();
+    List<User> findAllByApplicationStatusNotNullAndFirstnameNotNullOrderById();
 
     User findUserById(Long userId);
 }
