@@ -60,6 +60,10 @@ public class SecConfig {
         return http.build();
     }
 
+//    heroku pg:psql --app backend-iv1201-group9 < new_database-dump.sql
+//    psql --host=ec2-54-229-194-122.eu-west-1.compute.amazonaws.com --port=5432 --username=nihndyiflvnzhh --password --dbname=d420v7f33ovtac
+
+
     /**
      * Bean for configuration of Cross-origin resource sharing in Spring application
      * @return <code>UrlBasedCorsConfigurationSource<code/> to be used for configuration
@@ -68,7 +72,7 @@ public class SecConfig {
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("http://localhost:3000"));
+        configuration.setAllowedOrigins(Arrays.asList("https://frontend-iv1201-group9.herokuapp.com/"));
         configuration.setAllowedMethods(Arrays.asList("GET","POST","PATCH", "PUT", "DELETE", "OPTIONS", "HEAD"));
         configuration.setAllowCredentials(true);
         configuration.setAllowedHeaders(Arrays.asList("Authorization" , "Origin", "X-Requested-With", "Content-Type", "Accept"));

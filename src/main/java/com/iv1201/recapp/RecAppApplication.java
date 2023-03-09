@@ -29,7 +29,7 @@ public class RecAppApplication {
                 registry
                         .addMapping("/**")
 //                        .addMapping("/api/v1/auth/signup")
-                        .allowedOrigins("http://localhost:3000")
+                        .allowedOrigins("https://frontend-iv1201-group9.herokuapp.com/")
                         .allowedMethods("GET","POST","PATCH", "PUT", "DELETE", "OPTIONS", "HEAD");
             }
         };
