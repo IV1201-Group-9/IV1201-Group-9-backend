@@ -8,7 +8,7 @@ The aim of the project for this course is to learn how to make good choices abou
 The web application serves as a tool for people to register and apply for a job at an amusement park. Individuals can log in using their credentials and submit their job application. See https://github.com/IV1201-Group-9/IV1201-Group-9-frontend for client-application meant to be used together with this backend. 
 
 ## Tools and Frameworks
-Bellow are some of the tools and framworks used for this backend application:
+Below are some of the tools and framworks used for this backend application:
 - Spring Boot
 - Spring Security
 - Postgres
