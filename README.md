@@ -13,7 +13,8 @@ Bellow are some of the tools and framworks used for this backend application:
 - Spring Security
 - Postgres
 - JSON Web Token (JWT)
-For see the MAVEN project file.
+
+For more see the MAVEN project file.
 
 ## Architecture
 The backend, which is responsible for processing data and handling requests, is located in src/main/java/com/iv1201/recapp/. It is built using the Java programming language and the Spring Boot framework to provide a RESTful API. Layers included are: 
